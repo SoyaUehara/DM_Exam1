@@ -13,10 +13,9 @@ def true_function(x):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    datasets = np.array([[-1], [1]])
-    x = datasets[:, 0]
+    datasets = np.array([-1, 1])
     fig = plt.figure()
-    plt.plot(x, true_function(x), color='black', label="data test")
+    plt.plot(datasets, true_function(datasets), color='black', label="data test")
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend()
