@@ -27,15 +27,5 @@ if __name__ == "__main__":
         ture_num.append(true_function(num)+Gauss[0][0])
 
     dic_arr = {'観測点': seed_List, '観測値': ture_num}
-    print(pd.DataFrame(dic_arr))
-    dic_arr = pd.DataFrame(dic_arr)
-    x = dic_arr['観測点']
-    y = dic_arr['観測値']
-
-    fig = plt.figure()
-    plt.scatter(x, y, color="black", label="data", s=5)
-    plt.xlabel('観測点')
-    plt.ylabel('観測値')
-    plt.legend()
-    plt.show()
-    fig.savefig("ex1.3.png")
+    df = pd.DataFrame(dic_arr)
+    df.to_csv('output.tsv', sep='\t', index=True, index_label='col0')
