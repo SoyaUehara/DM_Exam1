@@ -26,6 +26,8 @@ if __name__ == "__main__":
         Gauss = np.random.normal(0.0, 2.0, (1, 1))
         ture_num.append(true_function(num)+Gauss[0][0])
 
-    dic_arr = {'観測点': seed_List, '観測値': ture_num}
-    df = pd.DataFrame(dic_arr)
-    df.to_csv('output.tsv', sep='\t', index=False)
+    #dic_arr = {'観測点': seed_List, '観測値': ture_num}
+    #df = pd.DataFrame(dic_arr)
+    #df.to_csv('output.tsv', sep='\t', index=False)
+    df = pd.read_csv('output.tsv', sep='\t')
+    print(type(df))
