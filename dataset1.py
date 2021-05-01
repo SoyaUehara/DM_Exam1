@@ -28,4 +28,4 @@ if __name__ == "__main__":
 
     dic_arr = {'観測点': seed_List, '観測値': ture_num}
     df = pd.DataFrame(dic_arr)
-    df.to_csv('output.tsv', sep='\t', index=True, index_label='col0')
+    df.to_csv('output.tsv', sep='\t', index=False)
